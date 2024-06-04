@@ -1,9 +1,13 @@
+import sqlite3
 import itertools
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 import numpy as np
+
+#CREATE THE DATABASE
+connection = sqlite3.connect('gpt.sql')
 
 with open("file.txt", 'r', encoding='utf-8') as file:
   text = file.read()
